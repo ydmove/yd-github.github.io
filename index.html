@@ -1,89 +1,55 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>人物K精彩瞬间</title>
+    <title>Persona Chronicles</title>
     <style>
-        body {
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-            min-height: 100vh;
-            margin: 0;
-            font-family: 'Microsoft YaHei', sans-serif;
-        }
-        .gallery {
+        .portal {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-template-columns: repeat(2, 1fr);
             gap: 2rem;
             padding: 4rem;
-            perspective: 1000px;
+            max-width: 1200px;
+            margin: 0 auto;
         }
-        .card {
+        .character-card {
             background: rgba(255,255,255,0.1);
             border-radius: 15px;
-            min-height: 500px;  /* 新增最小高度 */
-            padding: 2rem;      /* 增大内边距 */
-        }
-        img {
-            height: 400px;      /* 调大图片高度 */
-            object-fit: contain;/* 保持完整比例 */
-        }
-        .card:hover {
-            transform: rotateY(10deg) rotateX(5deg) translateY(-10px);
-            box-shadow: 0 15px 40px rgba(0,255,255,0.2);
-        }
-        .card img {
-            width: 100%;
-            height: 400px;
-            object-fit: cover;
-            border-radius: 10px;
-            border: 2px solid #00ffff;
-        }
-        .caption {
-            color: #fff;
-            padding: 1rem;
-            text-align: center;
-        }
-        h1 {
-            color: #00ffff;
-            text-align: center;
-            font-size: 3rem;
-            text-shadow: 0 0 10px rgba(0,255,255,0.5);
             padding: 2rem;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .character-card:hover {
+            transform: translateY(-5px);
+        }
+        .character-card h2 {
+            color: #00ffff;
+            border-bottom: 2px solid;
+            padding-bottom: 1rem;
+        }
+        .nav-button {
+            background: linear-gradient(45deg, #1a1a2e, #16213e);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 25px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 1rem;
         }
     </style>
 </head>
 <body>
-    <h1>人物K的奇幻之旅</h1>
-    <div class="gallery">
-        <div class="card">
-            <img src="./CK1.jpg" alt="Athletics" style="border: 3px solid #ff0000;">
-            <div class="caption">
-                <h3>🏋️ Power Moment</h3>
-                <p>Olympic Training Center｜Professional sports posture</p>
-            </div>
+    <h1 style="text-align:center;color:#00ffff">Character Archives</h1>
+    <div class="portal">
+        <div class="character-card">
+            <h2>K - The Athlete</h2>
+            <a href="k_gallery.html" class="nav-button">View Biography</a>
         </div>
-        <div class="card">
-            <img src="./CK2.jpg" alt="Art Performance" style="border: 3px solid #00ff00; box-shadow: 0 0 15px rgba(0,255,0,0.5);">
-            <div class="caption">
-                <h3>🎭 禅意之美</h3>
-                <p>大剧院非遗文化展演｜精准还原敦煌壁画的灵动神韵</p>
-            </div>
-        </div>
-        <div class="card">
-            <img src="./CK3.jpg" alt="Mountain Sunrise" style="border: 3px solid #0000ff; box-shadow: 0 0 15px rgba(0,0,255,0.5);">
-            <div class="caption">
-                <h3>⛰️ 秘境曙光</h3>
-                <p>金佛山日出时分｜捕捉第一缕阳光洒落雪峰的震撼瞬间</p>
-            </div>
+        <!-- 重复以下结构添加其他三个角色 -->
+        <div class="character-card">
+            <h2>L - The Artist</h2>
+            <a href="#" class="nav-button">Coming Soon</a>
         </div>
     </div>
-    <script>
-        // 添加卡片悬停音效
-        document.querySelectorAll('.card').forEach(card => {
-            card.addEventListener('mouseenter', () => {
-                new Audio('data:audio/wav;base64,UklGRl9vT19XQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YU').play();
-            })
-        });
-    </script>
 </body>
 </html>
