@@ -20,10 +20,12 @@
         .card {
             background: rgba(255,255,255,0.1);
             border-radius: 15px;
-            padding: 1.5rem;
-            transform-style: preserve-3d;
-            transition: all 0.5s ease;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            min-height: 500px;  /* 新增最小高度 */
+            padding: 2rem;      /* 增大内边距 */
+        }
+        img {
+            height: 400px;      /* 调大图片高度 */
+            object-fit: contain;/* 保持完整比例 */
         }
         .card:hover {
             transform: rotateY(10deg) rotateX(5deg) translateY(-10px);
@@ -54,7 +56,7 @@
     <h1>人物K的奇幻之旅</h1>
     <div class="gallery">
         <div class="card">
-            <img src="人物K-体育生.jpg" alt="运动风采" style="border: 3px solid #ff0000; box-shadow: 0 0 15px rgba(255,0,0,0.5);">
+            <img src="./人物K-体育生.jpg" alt="运动风采" style="border: 3px solid #ff0000; box-shadow: 0 0 15px rgba(255,0,0,0.5);">
             <div class="caption">
                 <h3>🏋️ 力量时刻</h3>
                 <p>摄于奥林匹克训练中心｜展现完美肌肉线条与专业运动姿态</p>
